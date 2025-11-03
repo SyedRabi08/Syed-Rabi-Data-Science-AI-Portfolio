@@ -141,6 +141,15 @@ st.markdown(
         min-height: 400px;
         width: 100%;
     }
+    /* Streamlit Plotly charts container styling */
+    .stPlotlyChart {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 30px;
+        min-height: 400px;
+        width: 100%;
+    }
     
     /* Insight Cards */
     .insights-grid {
@@ -515,7 +524,6 @@ def main():
         # Charts
         chart1, chart2 = st.columns(2)
         with chart1:
-            st.markdown('<div class="chart-container">', unsafe_allow_html=True)
             fig = px.line(processed_data['monthly_data'], x='Order Month', y='Sales', template='plotly_dark')
             fig.update_layout(
                 margin=dict(l=0, r=0, t=30, b=0),
@@ -524,10 +532,8 @@ def main():
                 yaxis=dict(title=dict(text='Sales ($)', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc')),
             )
             st.plotly_chart(fig, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
         with chart2:
-            st.markdown('<div class="chart-container">', unsafe_allow_html=True)
             fig = px.bar(processed_data['category_data'], x='Category', y='Profit', template='plotly_dark')
             fig.update_layout(
                 margin=dict(l=0, r=0, t=30, b=0),
@@ -536,7 +542,6 @@ def main():
                 yaxis=dict(title=dict(text='Profit ($)', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc')),
             )
             st.plotly_chart(fig, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
     elif st.session_state.page == 'insights':
         st.markdown(
@@ -594,7 +599,6 @@ def main():
                 unsafe_allow_html=True,
             )
 
-        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
         fig = px.scatter(processed_data['df'], x='Discount', y='Profit', color='Category', template='plotly_dark', opacity=0.7)
         fig.update_layout(
             margin=dict(l=0, r=0, t=30, b=0),
@@ -603,7 +607,6 @@ def main():
             yaxis=dict(title=dict(text='Profit ($)', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc')),
         )
         st.plotly_chart(fig, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
     elif st.session_state.page == 'predictor':
         st.markdown(
@@ -654,7 +657,6 @@ def main():
                     )
             st.markdown("</div>", unsafe_allow_html=True)
 
-        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
         model_metrics_df = pd.DataFrame({
             'Metric': ['Accuracy', 'Precision (Loss)', 'Recall (Loss)', 'F1-Score (Loss)'],
             'Score': [0.95, 0.95, 0.79, 0.86]
@@ -666,7 +668,6 @@ def main():
             xaxis=dict(title=dict(text='Metric', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc')),
         )
         st.plotly_chart(fig, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
     elif st.session_state.page == 'recommendations':
         st.markdown(
@@ -734,7 +735,6 @@ def main():
 
         # --- Sub-Category Performance ---
         st.subheader("Profitability by Product Sub-Category")
-        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
         fig = px.bar(
             processed_data['subcategory_data'],
             x='Profit',
@@ -752,7 +752,6 @@ def main():
             xaxis=dict(title=dict(text='Total Profit ($)', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc')),
         )
         st.plotly_chart(fig, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
         # --- Top Customers ---
         st.subheader("Top 10 Customers by Profit (Customer Lifetime Value)")
@@ -773,7 +772,6 @@ def main():
         else:
             st.info("No customer data available to show top customers.")
 
-        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
         if not top_customers.empty:
             fig = px.bar(
                 top_customers,
@@ -790,13 +788,11 @@ def main():
                 xaxis=dict(title=dict(text='Total Profit ($)', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc')),
             )
             st.plotly_chart(fig, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
 
         # --- Sales by Day of Week and Ship Mode ---
         chart1, chart2 = st.columns(2)
         with chart1:
             st.subheader("Sales and Profit by Day of the Week")
-            st.markdown('<div class="chart-container">', unsafe_allow_html=True)
             fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.05)
             fig.add_trace(go.Bar(x=processed_data['dow_data']['Order Day of Week'], y=processed_data['dow_data']['Sales'], name='Sales'), row=1, col=1)
             fig.add_trace(go.Bar(x=processed_data['dow_data']['Order Day of Week'], y=processed_data['dow_data']['Profit'], name='Profit'), row=2, col=1)
@@ -811,11 +807,9 @@ def main():
             fig.update_yaxes(title_text='Sales ($)', row=1, col=1, tickfont=dict(color='#e0fbfc'))
             fig.update_yaxes(title_text='Profit ($)', row=2, col=1, tickfont=dict(color='#e0fbfc'))
             st.plotly_chart(fig, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
         with chart2:
             st.subheader("Ship Mode Profitability")
-            st.markdown('<div class="chart-container">', unsafe_allow_html=True)
             fig = px.bar(
                 processed_data['shipmode_data'],
                 x='Ship Mode',
@@ -830,7 +824,6 @@ def main():
                 yaxis=dict(title=dict(text='Profit Margin', font=dict(color='#e0fbfc')), tickfont=dict(color='#e0fbfc'))
             )
             st.plotly_chart(fig, use_container_width=True)
-            st.markdown('</div>', unsafe_allow_html=True)
 
     # --- Footer ---
     st.markdown('<div class="footer"><p>Business Analytics Department | Superstore Sales Analysis | October 2025</p></div>', unsafe_allow_html=True)
