@@ -30,7 +30,7 @@ Below is a list of the live applications available. Each one is a complete, depl
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
 | **[Superstore Sales Dashboard](./Superstore_Sales_Dashboard/)** | An interactive tool to explore sales, profit, and performance metrics from a retail dataset. | [View Live Demo](#) |
-| **[Billing Insights Analyzer](./Billing_Insights_Analyzer/)** | A dashboard for billing companies to track payments, predict delays, and flag anomalies. | [View Live Demo](#) |
+| **[Billing Insights Analyzer](./Billing_Insights_Analyzer/)** | A dashboard for billing companies to track payments, predict delays, and flag anomalies. | [View Live Demo](https://storedashboardpy-g3yguhdma4py7ufwdxpbap.streamlit.app/) |
 | **[Customer Churn Predictor](./Customer_Churn_Predictor/)** | A simple interface to visualize which customers are at risk of leaving and the key factors driving churn. | [View Live Demo](#) |
 
 *(This list will grow as I build and deploy new applications.)*
@@ -57,3 +57,4 @@ Ready to turn your data into a powerful, interactive business tool? Let's talk.
 ---
 
 ⬅️ **[← Back to Dashboards](../README.md)**
+
