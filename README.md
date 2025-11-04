@@ -59,7 +59,7 @@ I work with:
 If you’re ready for data-driven decisions, smart models and tangible business impact — let’s talk.  
 **Email:** syedrabi08@gmail.com  
 **LinkedIn:** [linkedin.com/in/syed-rabi-903860371](https://www.linkedin.com/in/syed-rabi-903860371)  
-**GitHub:** github.com/SyedRabi08  
+**GitHub:** [https://github.com/SyedRabi08]  
 
 ---
 
