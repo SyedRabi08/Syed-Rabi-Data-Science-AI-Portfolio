@@ -1,7 +1,5 @@
 
 
-Of course! Here is a complete, ready-to-use `README.md` file for your `Personal_Brand` folder. This file acts as a mini media kit, making it easy for clients, collaborators, or even event organizers to understand your brand and use your assets professionally.
-
 ---
 
 # 🌟 Personal Brand & Media Kit
@@ -54,3 +52,4 @@ I'm always open to discussing new projects, speaking opportunities, or collabora
 ---
 
 ⬅️ **[← Back to Main Portfolio](../README.md)**
+
