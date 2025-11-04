@@ -20,7 +20,7 @@ In today's fast-paced business environment, static reports are not enough. Dashb
 
 | Dashboard | Description | Tools Used | Link |
 |-----------|-------------|------------|------|
-| **Superstore Sales Dashboard** | An interactive view of sales, profit, and performance by region, category, and customer segment. | Streamlit, Python, Pandas | [View Live Demo](#) |
+| **Superstore Sales Dashboard** | An interactive view of sales, profit, and performance by region, category, and customer segment. | Streamlit, Python, Pandas | [View Live Demo](https://storedashboardpy-g3yguhdma4py7ufwdxpbap.streamlit.app/) |
 | **Billing Insights Dashboard** *(Coming Soon)* | A tool for billing companies to track payments, predict delays, and spot errors automatically. | Power BI, Python | [View Live Demo](#) |
 | **Customer Churn Predictor** *(Coming Soon)* | A simple interface to see which customers are at risk of leaving and why. | Streamlit, Scikit-learn | [View Live Demo](#) |
 
