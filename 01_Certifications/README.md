@@ -1,7 +1,3 @@
-
-
-Of course! Here is the complete, ready-to-use `README.md` file for your `Certifications` folder. You can copy this directly into a file named `README.md` inside your `Certifications` directory on GitHub.
-
 ---
 
 # 🏅 Certifications
