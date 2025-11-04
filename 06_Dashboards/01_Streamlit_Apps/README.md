@@ -17,7 +17,7 @@ I use Streamlit to transform complex data analyses into intuitive, user-friendly
 
 Each project within this directory is organized into its own subfolder. Inside any given project folder, you will typically find:
 
--   **`app.py`**: The core Python script that runs the application.
+-   **`store_dashboard.py.py`**: The core Python script that runs the application.
 -   **`README.md`**: A detailed explanation of that specific project, its purpose, and a link to the live demo.
 -   **Data files & assets**: Any necessary data or images used by the app.
 
@@ -57,5 +57,6 @@ Ready to turn your data into a powerful, interactive business tool? Let's talk.
 ---
 
 ⬅️ **[← Back to Dashboards](../README.md)**
+
 
 
