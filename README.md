@@ -7,7 +7,7 @@ I help businesses of all types unlock value from their data — turning raw numb
 
 ## 🔍 What I Do  
 - I build end-to-end data solutions: from **data gathering and cleaning**, through **modelling and insights**, to **deployment and maintenance**.  
-- I don’t just hand you a model — I show you *how to use it*, *how to maintain it*, and *how your team can adopt it*.  
+- I don’t just hand you a model — I show you *how to use it* and *how your team can adopt it*.  
 - I operate solo, lead teams when needed, and focus on business outcomes (not just code).  
 
 ---
@@ -50,8 +50,8 @@ I work with:
 
 ## 📁 Featured Projects  
 - **Superstore Data Analysis** — Completed full analysis, interactive Streamlit dashboard, insights for retail profitability.  
-- [Link to project repository or demo]  
-- (Add more projects here as you go)  
+- [View Project on GitHub](https://github.com/SyedRabi08/Syed-Rabi-Data-Science-AI-Portfolio/tree/main/02_Projects/02_Superstore_Sales_Forecast)
+-  
 
 ---
 
