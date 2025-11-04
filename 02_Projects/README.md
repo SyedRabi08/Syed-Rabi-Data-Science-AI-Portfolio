@@ -266,3 +266,5 @@ For questions about these projects or collaboration opportunities:
 ---
 
 ⭐ If you find these projects interesting, please consider giving them a star!
+
+⬅️ **[← Back to Main Portfolio](../README.md)**
