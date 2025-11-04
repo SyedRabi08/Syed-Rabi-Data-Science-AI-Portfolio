@@ -276,17 +276,29 @@ st.markdown(
 # --- Data Loading and Processing ---
 @st.cache_data
 def load_data():
-    # List of possible file paths to check
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Get the project root (one level up from scripts/)
+    project_root = os.path.dirname(script_dir)
+    # Get the repository root (go up two levels from scripts/)
+    repo_root = os.path.dirname(project_root)
+    
+    # List of possible file paths to check (in order of preference)
     possible_paths = [
-        # Relative paths from the script's location
+        # Path relative to script location (scripts/../data/processed/) - MOST RELIABLE
+        os.path.join(project_root, "data", "processed", "superstore_cleaned.csv"),
+        # Path relative to repository root (when running from repo root)
+        os.path.join(repo_root, "02_Projects", "02_Superstore_Sales_Forecast", "data", "processed", "superstore_cleaned.csv"),
+        # Relative paths from current working directory (when CWD is project root)
         "data/processed/superstore_cleaned.csv",
-        # Relative paths from the project root
-        "projects/store-data-analysis/data/processed/superstore_cleaned.csv",
+        # Relative paths from current working directory (when CWD is repo root)
+        "02_Projects/02_Superstore_Sales_Forecast/data/processed/superstore_cleaned.csv",
         # Absolute paths using the current working directory
-        os.path.join(os.getcwd(), "data/processed/superstore_cleaned.csv"),
-        os.path.join(os.getcwd(), "projects/store-data-analysis/data/processed/superstore_cleaned.csv"),
-        # Add more paths if needed
-        "C:/Users/syedr/PROJECT 1/store_analysis/notebooks/projects/store-data-analysis/data/processed/superstore_cleaned.csv"
+        os.path.join(os.getcwd(), "data", "processed", "superstore_cleaned.csv"),
+        os.path.join(os.getcwd(), "02_Projects", "02_Superstore_Sales_Forecast", "data", "processed", "superstore_cleaned.csv"),
+        # Legacy paths for backwards compatibility
+        "projects/store-data-analysis/data/processed/superstore_cleaned.csv",
+        os.path.join(os.getcwd(), "projects", "store-data-analysis", "data", "processed", "superstore_cleaned.csv"),
     ]
     
     # Try each path until one works
@@ -301,17 +313,32 @@ def load_data():
                 st.error(f"Error reading CSV: {e}")
                 return None
     
+    # Debug: Show all paths that were checked
+    debug_info = f"""
+    **Debug Information:**
+    - Script directory: {script_dir}
+    - Project root: {project_root}
+    - Repository root: {repo_root}
+    - Current working directory: {os.getcwd()}
+    
+    **Paths checked:**
+    """
+    for i, path in enumerate(possible_paths, 1):
+        exists = "✅" if os.path.exists(path) else "❌"
+        debug_info += f"\n    {i}. {exists} {path}"
+    
     # If none of the paths work, show a helpful error message
     st.error(
-        """
+        f"""
     ### ❌ Data File Not Found
     
     The application could not find the `superstore_cleaned.csv` file.
     
-    Please ensure the file is placed in one of the following locations:
-    - `data/processed/superstore_cleaned.csv`
-    - `projects/store-data-analysis/data/processed/superstore_cleaned.csv`
-    - Your project's root directory
+    {debug_info}
+    
+    **Please ensure the file is placed in one of the following locations:**
+    - `data/processed/superstore_cleaned.csv` (relative to project root)
+    - `02_Projects/02_Superstore_Sales_Forecast/data/processed/superstore_cleaned.csv` (relative to repo root)
     
     If you need to re-create it, please run the data cleaning steps in your analysis notebook first.
     """
