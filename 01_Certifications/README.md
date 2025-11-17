@@ -12,13 +12,13 @@ Below is a summary of my key certifications. Each certificate file is available 
 
 | Issuer | Title | Domain / Skills | Year |
 |--------|-------|-----------------|------|
-| **IBM** | Data Science Professional Certificate | Data Science, Machine Learning, Python | 2025 |
-| **Google** | Data Analytics | Data Analysis, SQL, Data Visualization | 2025 |
-| **ML.io** | ML & DL | Machine Learning, Deep Learning, Neural Networks | 2025 |
-| **Microsoft** | Azure Data Scientist Associate (DP-100) Exam Prep | Azure ML, Cloud AI, Model Deployment | 2025 |
-| **Coursera** | Advanced Statistics for Data Science | Statistics, Hypothesis Testing, Regression | 2026 |
-| **Coursera** | Math for Machine Learning | Linear Algebra, Calculus, Probability | 2026 |
-| **HackerRank** | Python, SQL, Java, Software Engineering & Problem Solving | Programming, Logic, Algorithms | 2026 |
+| **IBM** | Data Science Professional Certificate | Data Science, Machine Learning, Python | 2022 |
+| **Google** | Data Analytics | Data Analysis, SQL, Data Visualization | 2023 |
+| **ML.io** | ML & DL | Machine Learning, Deep Learning, Neural Networks | 2023 |
+| **Microsoft** | Azure Data Scientist Associate (DP-100) Exam Prep | Azure ML, Cloud AI, Model Deployment | 2024 |
+| **Coursera** | Advanced Statistics for Data Science | Statistics, Hypothesis Testing, Regression | 2024 |
+| **Coursera** | Math for Machine Learning | Linear Algebra, Calculus, Probability | 2025 |
+| **HackerRank** | Python, SQL, Java, Software Engineering & Problem Solving | Programming, Logic, Algorithms | 2025 |
 
 ---
 
