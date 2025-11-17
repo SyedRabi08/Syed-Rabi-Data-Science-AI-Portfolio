@@ -277,7 +277,7 @@ tail -f reporting_pipeline.log
 
 ## 📜 License
 
-MIT License - Free for commercial use. See `LICENSE` file for details.
+See `LICENSE` file for details.
 
 ---
 
