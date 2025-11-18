@@ -45,11 +45,6 @@ The analysis followed a structured, progressive approach:
 ## How to Run This Project
 
 1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
-    ```
-
 2.  **Install Dependencies:** It's recommended to use a virtual environment.
     ```bash
     pip install -r requirements.txt
